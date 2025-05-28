@@ -33,7 +33,7 @@ const Services = () => (
       <div className="services-grid">
         <div className="service-card">
           <img
-            src="https://images.pexels.com/photos/4339597/pexels-photo-4339597.jpeg"
+            src="https://cdn.pixabay.com/photo/2022/11/18/20/23/automobile-7600895_1280.jpg"
             alt="Car key replacement by Clovis Lock Pros in Clovis, NM"
             className="service-image"
             loading="lazy"
@@ -43,7 +43,7 @@ const Services = () => (
         </div>
         <div className="service-card">
           <img
-            src="https://pixabay.com/photos/door-lock-security-key-1209136/"
+            src="https://cdn.pixabay.com/photo/2019/09/30/15/59/key-4516169_1280.jpg"
             alt="Residential locksmith services for door locks in Clovis, NM"
             className="service-image"
             loading="lazy"
@@ -53,7 +53,7 @@ const Services = () => (
         </div>
         <div className="service-card">
           <img
-            src="https://images.unsplash.com/photo-1563218810-8baceb2a774a"
+            src="https://cdn.pixabay.com/photo/2014/08/02/18/36/key-408559_1280.jpg"
             alt="Commercial locksmith security systems in Clovis, NM"
             className="service-image"
             loading="lazy"
@@ -71,7 +71,7 @@ const About = () => (
     <div className="about-container">
       <h2>About Clovis Lock Pros</h2>
       <img
-        src="https://images.pexels.com/photos/6911160/pexels-photo-6911160.jpeg"
+        src="https://cdn.pixabay.com/photo/2013/08/29/04/37/automobile-176989_1280.jpg"
         alt="Clovis Lock Pros team providing expert locksmith services in Clovis, NM"
         className="about-image"
         loading="lazy"
@@ -146,7 +146,7 @@ const Contact = () => {
 const Footer = () => (
   <footer className="footer">
     <p>© 2025 Clovis Lock Pros. All rights reserved.</p>
-    <p>Clovis, New Mexico | (575) 777-7272 | info@clovislockpros.com</p>
+    <p>Clovis, New Mexico | (575) 309-1364 | info@clovislockpros.com</p>
     <p>This Website was custom designed for Clovis Lock Pro by the team at Xeris Web Co.</p>
   </footer>
 );
