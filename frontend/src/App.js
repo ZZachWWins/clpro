@@ -1,3 +1,4 @@
+import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
 import './App.css';
 
 const Header = () => (
@@ -5,10 +6,10 @@ const Header = () => (
     <nav className="nav-container">
       <h1>Clovis Lock Pros</h1>
       <ul className="nav-links">
-        <li><a href="#home">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/services">Services</Link></li>
+        <li><Link to="/about">About</Link></li>
+        <li><Link to="/contact">Contact</Link></li>
       </ul>
     </nav>
   </header>
@@ -19,7 +20,7 @@ const Hero = () => (
     <div className="hero-content">
       <h2>Expert Locksmith Services in Clovis, NM</h2>
       <p>Your trusted partner for all locksmith needs - cars, homes, and businesses.</p>
-      <a href="#contact" className="hero-button">Get Help Now</a>
+      <NavLink to="/contact" className="hero-button">Get Help Now</NavLink>
     </div>
   </section>
 );
@@ -124,14 +125,16 @@ const Footer = () => (
 );
 
 const App = () => (
-  <div>
+  <BrowserRouter>
     <Header />
-    <Hero />
-    <Services />
-    <About />
-    <Contact />
+    <Routes>
+      <Route path="/" element={<Hero />} />
+      <Route path="/services" element={<Services />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+    </Routes>
     <Footer />
-  </div>
+  </BrowserRouter>
 );
 
 export default App;
