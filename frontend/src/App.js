@@ -1,4 +1,3 @@
-// App.js
 import './App.css';
 
 const Header = () => (
@@ -17,9 +16,11 @@ const Header = () => (
 
 const Hero = () => (
   <section id="home" className="hero">
-    <h2>Expert Locksmith Services in Clovis, NM</h2>
-    <p>Your trusted partner for all locksmith needs - cars, homes, and more.</p>
-    <a href="#contact" className="hero-button">Get Help Now</a>
+    <div className="hero-content">
+      <h2>Expert Locksmith Services in Clovis, NM</h2>
+      <p>Your trusted partner for all locksmith needs - cars, homes, and businesses.</p>
+      <a href="#contact" className="hero-button">Get Help Now</a>
+    </div>
   </section>
 );
 
@@ -29,14 +30,32 @@ const Services = () => (
       <h2>Our Services</h2>
       <div className="services-grid">
         <div className="service-card">
+          <img
+            src="https://images.pexels.com/photos/4339597/pexels-photo-4339597.jpeg"
+            alt="Car key replacement by Clovis Lock Pros in Clovis, NM"
+            className="service-image"
+            loading="lazy"
+          />
           <h3>Automotive Locksmith</h3>
           <p>Car key replacements, lockouts, and transponder key programming.</p>
         </div>
         <div className="service-card">
+          <img
+            src="https://pixabay.com/photos/door-lock-security-key-1209136/"
+            alt="Residential locksmith services for door locks in Clovis, NM"
+            className="service-image"
+            loading="lazy"
+          />
           <h3>Residential Locksmith</h3>
           <p>Home lockouts, lock installations, and rekeying services.</p>
         </div>
         <div className="service-card">
+          <img
+            src="https://images.unsplash.com/photo-1563218810-8baceb2a774a"
+            alt="Commercial locksmith security systems in Clovis, NM"
+            className="service-image"
+            loading="lazy"
+          />
           <h3>Commercial Locksmith</h3>
           <p>High-security locks, master key systems, and business lockouts.</p>
         </div>
@@ -49,6 +68,12 @@ const About = () => (
   <section id="about" className="about">
     <div className="about-container">
       <h2>About Clovis Lock Pros</h2>
+      <img
+        src="https://images.pexels.com/photos/6911160/pexels-photo-6911160.jpeg"
+        alt="Clovis Lock Pros team providing expert locksmith services in Clovis, NM"
+        className="about-image"
+        loading="lazy"
+      />
       <p>
         Clovis Lock Pros is your local locksmith in Clovis, New Mexico, dedicated to providing fast, reliable, and professional locksmith services. From car lockouts to home security upgrades, we handle all types of locks with expertise and care.
       </p>
