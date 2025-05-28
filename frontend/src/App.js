@@ -1,4 +1,5 @@
 import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
+import { useState } from 'react';
 import './App.css';
 
 const Header = () => (
@@ -83,13 +84,20 @@ const About = () => (
 );
 
 const Contact = () => {
-  const handleSubmit = () => {
-    const name = document.getElementById('name').value;
-    const email = document.getElementById('email').value;
-    const message = document.getElementById('message').value;
-    console.log('Form Submission:', { name, email, message });
-    alert('Message sent! Check console for details.');
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleChange = (e) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
   };
+
+  const mailtoLink = `mailto:infoclovislockpros@gmail.com?subject=Contact from ${encodeURIComponent(formData.name)}&body=${encodeURIComponent(`From: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`)}`;
 
   return (
     <section id="contact" className="contact">
@@ -98,19 +106,37 @@ const Contact = () => {
         <div className="contact-form">
           <div>
             <label htmlFor="name">Name</label>
-            <input id="name" type="text" />
+            <input
+              id="name"
+              name="name"
+              type="text"
+              value={formData.name}
+              onChange={handleChange}
+            />
           </div>
           <div>
             <label htmlFor="email">Email</label>
-            <input id="email" type="email" />
+            <input
+              id="email"
+              name="email"
+              type="email"
+              value={formData.email}
+              onChange={handleChange}
+            />
           </div>
           <div>
             <label htmlFor="message">Message</label>
-            <textarea id="message" rows="4"></textarea>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              value={formData.message}
+              onChange={handleChange}
+            ></textarea>
           </div>
-          <button className="contact-button" onClick={handleSubmit}>
+          <a href={mailtoLink} className="contact-button">
             Send Message
-          </button>
+          </a>
         </div>
       </div>
     </section>
@@ -120,7 +146,8 @@ const Contact = () => {
 const Footer = () => (
   <footer className="footer">
     <p>© 2025 Clovis Lock Pros. All rights reserved.</p>
-    <p>Clovis, New Mexico | (555) 123-4567 | info@clovislockpros.com</p>
+    <p>Clovis, New Mexico | (575) 777-7272 | info@clovislockpros.com</p>
+    <p>This Website was custom designed for Clovis Lock Pro by the team at Xeris Web Co.</p>
   </footer>
 );
 
