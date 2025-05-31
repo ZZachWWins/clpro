@@ -131,7 +131,7 @@ const Services = () => (
 const About = () => (
   <section id="about" className="about">
     <div className="about-container">
-      <h2>About Clovis Lock Pros</h去除2>
+      <h2>About Clovis Lock Pros</h2>
       <img
         src="https://res.cloudinary.com/clovislockpros/image/upload/q_auto,f_webp/clovis-lock-pros-padlock.jpg"
         alt="Clovis Lock Pros locksmith team in Clovis, NM"
