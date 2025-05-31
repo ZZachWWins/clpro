@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, Link, NavLink } from 'react-router-dom';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet-async';
+import { motion, useAnimation } from 'framer-motion';
 import './App.css';
 
 const Header = () => (
@@ -17,15 +18,77 @@ const Header = () => (
   </header>
 );
 
-const Hero = () => (
-  <section id="home" className="hero">
-    <div className="hero-content">
-      <h2>24/7 Expert Locksmith Services in Clovis, NM</h2>
-      <p>Your trusted partner for emergency lockouts, key replacements, and security solutions for cars, homes, and businesses.</p>
-      <NavLink to="/#contact" className="hero-button">Get Help Now - Call (575) 309-1364</NavLink>
-    </div>
-  </section>
-);
+const Hero = () => {
+  const controls = useAnimation();
+  const textControls = useAnimation();
+  const [typedText, setTypedText] = useState('');
+  const fullText = "24/7 Expert Locksmith Services in Clovis, NM";
+
+  // Typewriter effect for the headline
+  useEffect(() => {
+    let i = 0;
+    const typeWriter = async () => {
+      while (i <= fullText.length) {
+        setTypedText(fullText.slice(0, i));
+        i++;
+        await new Promise((resolve) => setTimeout(resolve, 50));
+      }
+      // Start the infinite pulsing animation for the CTA after typing is done
+      await textControls.start({
+        opacity: 1,
+        scale: [1, 1.05, 1],
+        transition: { repeat: Infinity, duration: 1.5, ease: "easeInOut" },
+      });
+    };
+    typeWriter();
+  }, [textControls]);
+
+  // Background zoom animation
+  useEffect(() => {
+    controls.start({
+      scale: [1, 1.1],
+      transition: { duration: 10, repeat: Infinity, repeatType: "reverse", ease: "easeInOut" },
+    });
+  }, [controls]);
+
+  return (
+    <section id="home" className="hero">
+      <motion.div
+        className="hero-background"
+        animate={controls}
+        initial={{ scale: 1 }}
+      />
+      <div className="hero-content">
+        <motion.h2
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ duration: 1 }}
+          className="hero-title"
+        >
+          {typedText}
+        </motion.h2>
+        <motion.p
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 1, delay: 0.5 }}
+          className="hero-subtitle"
+        >
+          Locked Out? We’ll Get You Back In—Fast! Serving Clovis, NM with Emergency Locksmith Solutions.
+        </motion.p>
+        <motion.a
+          href="tel:+15753091364"
+          className="hero-button"
+          animate={textControls}
+          initial={{ opacity: 0 }}
+          whileHover={{ scale: 1.1 }}
+          whileTap={{ scale: 0.95 }}
+        >
+          Call Now: (575) 309-1364
+        </motion.a>
+      </div>
+    </section>
+  );
+};
 
 const Services = () => (
   <section id="services" className="services">
