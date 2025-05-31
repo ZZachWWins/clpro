@@ -23,7 +23,7 @@ const Hero = () => {
   const controls = useAnimation();
   const textControls = useAnimation();
   const [typedText, setTypedText] = useState('');
-  const fullText = "24/7 Expert Locksmith Services in Clovis, NM";
+  const fullText = "24/7 Car Unlocking Experts in Clovis, NM";
 
   useEffect(() => {
     let i = 0;
@@ -71,7 +71,7 @@ const Hero = () => {
           transition={{ duration: 1, delay: 0.5 }}
           className="hero-subtitle"
         >
-          Locked Out? We’ll Get You Back In—Fast! Serving Clovis, NM with Emergency Locksmith Solutions.
+          Locked Out of Your Car? We’ll Get You Back on the Road—Fast! Mobile Car Unlocking in Clovis, NM.
         </motion.p>
         <motion.a
           href="tel:+15753091364"
@@ -91,37 +91,17 @@ const Hero = () => {
 const Services = () => (
   <section id="services" className="services">
     <div className="services-container">
-      <h2>Our Locksmith Services in Clovis, NM</h2>
+      <h2>Our Mobile Car Unlocking Service in Clovis, NM</h2>
       <div className="services-grid">
         <div className="service-card">
           <img
             src="https://res.cloudinary.com/clovislockpros/image/upload/q_auto,f_webp/clovis-lock-pros-automotive-locksmith.jpg"
-            alt="Clovis Lock Pros automotive locksmith service in Clovis, NM"
+            alt="Clovis Lock Pros mobile car unlocking service in Clovis, NM"
             className="service-image"
             loading="lazy"
           />
-          <h3>Automotive Locksmith</h3>
-          <p>Fast car lockout services, key replacements, and transponder key programming in Clovis, NM.</p>
-        </div>
-        <div className="service-card">
-          <img
-            src="https://res.cloudinary.com/clovislockpros/image/upload/q_auto,f_webp/clovis-lock-pros-residential-locksmith.jpg"
-            alt="Clovis Lock Pros residential locksmith service in Clovis, NM"
-            className="service-image"
-            loading="lazy"
-          />
-          <h3>Residential Locksmith</h3>
-          <p>Expert home lockouts, lock installations, and rekeying services for Clovis, NM residents.</p>
-        </div>
-        <div className="service-card">
-          <img
-            src="https://res.cloudinary.com/clovislockpros/image/upload/q_auto,f_webp/clovis-lock-pros-commercial-locksmith.jpg"
-            alt="Clovis Lock Pros commercial locksmith service in Clovis, NM"
-            className="service-image"
-            loading="lazy"
-          />
-          <h3>Commercial Locksmith</h3>
-          <p>High-security locks, master key systems, and business lockout solutions in Clovis, NM.</p>
+          <h3>Mobile Car Unlocking</h3>
+          <p>Locked out of your car? We provide fast, 24/7 mobile car unlocking services in Clovis, NM. Get back on the road quickly!</p>
         </div>
       </div>
     </div>
@@ -134,12 +114,12 @@ const About = () => (
       <h2>About Clovis Lock Pros</h2>
       <img
         src="https://res.cloudinary.com/clovislockpros/image/upload/q_auto,f_webp/clovis-lock-pros-padlock.jpg"
-        alt="Clovis Lock Pros locksmith team in Clovis, NM"
+        alt="Clovis Lock Pros mobile car unlocking team in Clovis, NM"
         className="about-image"
         loading="lazy"
       />
       <p>
-        Clovis Lock Pros is your trusted locksmith in Clovis, New Mexico, providing fast, reliable, and professional locksmith services. From emergency car lockouts to home security upgrades, we handle all types of locks with expertise and care. Serving Clovis, NM since 2015.
+        Clovis Lock Pros is your trusted mobile locksmith in Clovis, New Mexico, specializing in fast and reliable car unlocking services. We come to you, wherever you are in Clovis, NM, to get you back into your vehicle quickly. Serving the community since 2015.
       </p>
     </div>
   </section>
@@ -165,7 +145,7 @@ const Contact = () => {
     <section id="contact" className="contact">
       <div className="contact-container">
         <h2>Contact Clovis Lock Pros</h2>
-        <p>Need a locksmith in Clovis, NM? Call us at <a href="tel:+15753091364" className="text-blue-600 hover:underline">(575) 309-1364</a> or send us a message below.</p>
+        <p>Locked out of your car in Clovis, NM? Call us at <a href="tel:+15753091364" className="text-blue-600 hover:underline">(575) 309-1364</a> or send us a message below.</p>
         <div className="contact-form">
           <div>
             <label htmlFor="name">Name</label>
@@ -219,7 +199,7 @@ const Testimonials = () => (
           <p className="mt-4 font-semibold">– Sarah M., Clovis, NM</p>
         </div>
         <div className="testimonial-card">
-          <p className="italic">"They replaced my business locks quickly and efficiently. Highly recommend!"</p>
+          <p className="italic">"I was locked out of my car, and they arrived within 20 minutes. Amazing service!"</p>
           <p className="mt-4 font-semibold">– Mike T., Clovis, NM</p>
         </div>
       </div>
@@ -229,10 +209,10 @@ const Testimonials = () => (
 
 const Footer = () => (
   <footer className="footer">
-    <p>123 Locksmith Lane, Clovis, NM 88101</p>
+    <p>Clovis, New Mexico</p>
     <p><a href="tel:+15753091364" className="text-blue-300 hover:underline">(575) 309-1364</a> | <a href="mailto:info@clovislockpros.com" className="text-blue-300 hover:underline">info@clovislockpros.com</a></p>
     <p>© 2025 Clovis Lock Pros. All rights reserved.</p>
-    <p>Website by <a href="https://xerisweb.co" className="text-blue-300 hover:underline">Xeris Web Co.</a></p>
+    <p>Website by <a href="https://xerisweb.com" className="text-blue-300 hover:underline">Xeris Web Co.</a></p>
   </footer>
 );
 
@@ -240,7 +220,7 @@ const blogPosts = [
   {
     slug: "how-to-handle-car-lockout-clovis-nm",
     title: "How to Handle a Car Lockout in Clovis, NM",
-    metaDescription: "Locked out of your car in Clovis, NM? Learn what to do, how to stay safe, and why Clovis Lock Pros is your best solution for fast, reliable service.",
+    metaDescription: "Locked out of your car in Clovis, NM? Learn what to do, how to stay safe, and why Clovis Lock Pros is your best solution for fast, reliable mobile car unlocking.",
     date: "May 15, 2025",
     content: `
       <p>Getting locked out of your car in Clovis, NM can be a stressful experience, especially if you're in a hurry or it's late at night. Here’s a step-by-step guide to handle the situation:</p>
@@ -249,43 +229,39 @@ const blogPosts = [
       <h3>Step 2: Ensure Your Safety</h3>
       <p>If you’re in an unsafe area or it’s dark, move to a well-lit, populated spot. Avoid trying to break into your car, as this can cause damage or injury.</p>
       <h3>Step 3: Call a Professional Locksmith</h3>
-      <p>Avoid makeshift solutions that might damage your vehicle. Instead, contact <a href="/#contact">Clovis Lock Pros</a> for immediate assistance. We offer 24/7 car lockout services in Clovis, NM, with fast response times.</p>
+      <p>Avoid makeshift solutions that might damage your vehicle. Instead, contact <a href="/#contact">Clovis Lock Pros</a> for immediate assistance. We offer 24/7 mobile car unlocking services in Clovis, NM, with fast response times.</p>
     `
   },
   {
-    slug: "top-5-home-security-tips-clovis-nm",
-    title: "Top 5 Home Security Tips for Clovis, NM Residents",
-    metaDescription: "Protect your home in Clovis, NM with these 5 essential security tips. Learn how to secure doors, windows, and more with Clovis Lock Pros.",
+    slug: "what-to-do-if-locked-out-of-car-clovis-nm",
+    title: "What to Do If You’re Locked Out of Your Car in Clovis, NM",
+    metaDescription: "Locked out of your car in Clovis, NM? Follow these tips to stay safe and get back on the road fast with Clovis Lock Pros’ mobile unlocking service.",
     date: "May 10, 2025",
     content: `
-      <p>Living in Clovis, NM, means taking steps to protect your home from potential threats. Here are five tips to enhance your home security:</p>
-      <h3>1. Upgrade Your Locks</h3>
-      <p>Old or worn-out locks are easy targets for burglars. Contact <a href="/#contact">Clovis Lock Pros</a> to install high-security locks that resist picking and bumping.</p>
-      <h3>2. Secure Windows and Sliding Doors</h3>
-      <p>Windows and sliding glass doors are common entry points. Add window locks or security film to make them harder to break.</p>
-      <h3>3. Install a Security System</h3>
-      <p>A monitored alarm system can deter intruders and alert authorities. Consider smart systems that let you monitor your home remotely.</p>
-      <h3>4. Improve Outdoor Lighting</h3>
-      <p>Motion-sensor lights around your property can scare off potential intruders by eliminating dark hiding spots.</p>
-      <h3>5. Know Your Neighbors</h3>
-      <p>Building a community watch program with neighbors can help everyone stay vigilant and report suspicious activity.</p>
+      <p>Being locked out of your car in Clovis, NM can happen to anyone. Here’s what to do to resolve the situation quickly and safely:</p>
+      <h3>1. Check for Open Windows or Doors</h3>
+      <p>Sometimes, a window might be slightly open, or a door might not be fully locked. Check every entry point before taking further action.</p>
+      <h3>2. Call for Help</h3>
+      <p>If you can’t get in, don’t risk damaging your car. Call <a href="/#contact">Clovis Lock Pros</a>—we specialize in mobile car unlocking and can arrive quickly anywhere in Clovis, NM.</p>
+      <h3>3. Prevent Future Lockouts</h3>
+      <p>Consider keeping a spare key with a trusted friend or family member, or use a magnetic key holder to avoid future lockouts.</p>
     `
   },
   {
-    slug: "why-choose-clovis-lock-pros",
-    title: "Why Choose Clovis Lock Pros for Your Locksmith Needs",
-    metaDescription: "Discover why Clovis Lock Pros is the #1 locksmith in Clovis, NM. Fast, reliable, and available 24/7 for all your lock and key needs.",
+    slug: "why-choose-clovis-lock-pros-car-unlocking",
+    title: "Why Choose Clovis Lock Pros for Car Unlocking in Clovis, NM",
+    metaDescription: "Discover why Clovis Lock Pros is the #1 choice for mobile car unlocking in Clovis, NM. Fast, reliable, and available 24/7 to get you back on the road.",
     date: "May 5, 2025",
     content: `
-      <p>When you need a locksmith in Clovis, NM, you want someone you can trust. Here’s why <a href="/">Clovis Lock Pros</a> is the best choice:</p>
+      <p>When you’re locked out of your car in Clovis, NM, you need a locksmith you can trust. Here’s why <a href="/">Clovis Lock Pros</a> is the best choice:</p>
       <h3>24/7 Availability</h3>
-      <p>Lockouts don’t wait for business hours. We’re available around the clock to help with emergency lockouts, key replacements, and more.</p>
-      <h3>Experienced Professionals</h3>
-      <p>With over 10 years of experience, our locksmiths are skilled in handling all types of locks, from residential to commercial systems.</p>
+      <p>Car lockouts can happen anytime. We’re available around the clock to provide mobile car unlocking services in Clovis, NM.</p>
       <h3>Fast Response Times</h3>
-      <p>We pride ourselves on quick arrivals—usually within 30 minutes—because we know every second counts when you’re locked out.</p>
-      <h3>Competitive Pricing</h3>
-      <p>We offer transparent pricing with no hidden fees. Get a free quote today and see why our customers trust us.</p>
+      <p>We pride ourselves on quick arrivals—usually within 30 minutes—because we know every second counts when you’re locked out of your car.</p>
+      <h3>Mobile Service</h3>
+      <p>We come to you, wherever you are in Clovis, NM, with the tools and expertise to unlock your car without damage.</p>
+      <h3>Experienced Professionals</h3>
+      <p>With over 10 years of experience, our locksmiths are skilled in unlocking all types of vehicles safely and efficiently.</p>
       <h3>Customer Satisfaction</h3>
       <p>Our 5-star reviews speak for themselves. We’re committed to ensuring you’re 100% satisfied with our service.</p>
     `
@@ -336,13 +312,13 @@ const BlogPost = () => {
 const HomePage = () => (
   <>
     <Helmet>
-      <title>Clovis Lock Pros | #1 Locksmith in Clovis, NM - 24/7 Service</title>
-      <meta name="description" content="Clovis Lock Pros - Expert Locksmith in Clovis, NM. 24/7 emergency lockout services, key replacements, and security solutions. Call us today!" />
-      <meta name="keywords" content="locksmith Clovis NM, emergency locksmith, lockout services, key replacement, Clovis Lock Pros" />
+      <title>Clovis Lock Pros | #1 Mobile Car Unlocking in Clovis, NM - 24/7 Service</title>
+      <meta name="description" content="Clovis Lock Pros - Expert Mobile Car Unlocking in Clovis, NM. 24/7 emergency lockout services to get you back on the road fast. Call us today!" />
+      <meta name="keywords" content="car unlocking Clovis NM, mobile locksmith Clovis NM, emergency car lockout, Clovis Lock Pros" />
       <meta name="robots" content="index, follow" />
       <meta name="author" content="Clovis Lock Pros" />
-      <meta property="og:title" content="Clovis Lock Pros | #1 Locksmith in Clovis, NM" />
-      <meta property="og:description" content="24/7 locksmith services in Clovis, NM. Emergency lockouts, key replacements, and security solutions." />
+      <meta property="og:title" content="Clovis Lock Pros | #1 Mobile Car Unlocking in Clovis, NM" />
+      <meta property="og:description" content="24/7 mobile car unlocking services in Clovis, NM. Emergency lockouts solved fast." />
       <meta property="og:type" content="website" />
       <meta property="og:url" content="https://www.clovislockpros.com" />
       <meta property="og:image" content="https://www.clovislockpros.com/images/logo.png" />
@@ -353,7 +329,6 @@ const HomePage = () => (
           "name": "Clovis Lock Pros",
           "address": {
             "@type": "PostalAddress",
-            "streetAddress": "123 Locksmith Lane",
             "addressLocality": "Clovis",
             "addressRegion": "NM",
             "postalCode": "88101",
@@ -368,7 +343,7 @@ const HomePage = () => (
           "openingHours": "Mo-Su 00:00-23:59",
           "url": "https://www.clovislockpros.com",
           "image": "https://www.clovislockpros.com/images/logo.png",
-          "description": "24/7 locksmith services in Clovis, NM. Emergency lockouts, key replacements, and security solutions.",
+          "description": "24/7 mobile car unlocking services in Clovis, NM. Emergency lockouts solved fast.",
           "review": [
             {
               "@type": "Review",
@@ -380,7 +355,7 @@ const HomePage = () => (
               "@type": "Review",
               "author": {"@type": "Person", "name": "Mike T."},
               "reviewRating": {"@type": "Rating", "ratingValue": "5"},
-              "reviewBody": "They replaced my business locks quickly and efficiently. Highly recommend!"
+              "reviewBody": "I was locked out of my car, and they arrived within 20 minutes. Amazing service!"
             }
           ],
           "sameAs": [
