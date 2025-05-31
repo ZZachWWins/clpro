@@ -1,9 +1,28 @@
 [build]
   publish = "frontend/build"
-  functions = "functions"
   command = "cd frontend && npm run build"
 
+# Redirects for SPA routing
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+# Prerendering for search engine bots to ensure crawlability
+[[redirects]]
+  from = "/*"
+  to = "https://service.prerender.io/https://www.clovislockpros.com/:splat"
+  status = 200
+  force = false
+  conditions = { "User-Agent" = ["*bot*", "Googlebot", "Bingbot", "Slurp", "DuckDuckBot"] }
+
+# Optimize performance with caching headers
+[[headers]]
+  for = "/static/*"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
+
+[[headers]]
+  for = "/*.webp"
+  [headers.values]
+    Cache-Control = "public, max-age=31536000, immutable"
